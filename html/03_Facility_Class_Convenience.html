@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facility Class Convenience Analysis</title>
+    <style>
+        body {font-family: 'Segoe UI', Arial, sans-serif; background: #f8fff9; color: #2c3e50; line-height: 1.7; margin: 0; padding: 40px 20px;}
+        .container {max-width: 1000px; margin: 0 auto; background: white; padding: 50px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 6px solid #1abc9c;}
+        h1 {color: #1abc9c; text-align: center; font-size: 36px; margin-bottom: 10px;}
+        h2 {color: #1abc9c; text-align: center; font-size: 22px; margin: 40px 0 20px;}
+        select {width: 100%; padding: 16px; font-size: 17px; border: 2px solid #ddd; border-radius: 10px; margin: 20px 0;}
+        .report {margin: 40px 0; padding: 30px; background: #f8fff9; border-left: 6px solid #1abc9c; border-radius: 10px; font-size: 19px; display: none;}
+        .highlight {color: #e67e22; font-weight: bold;}
+        .chart {text-align: center; margin: 50px 0;}
+        .chart img {max-width: 100%; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);}
+        .back {display: block; width: 300px; margin: 50px auto; padding: 16px; background: #1abc9c; color: white; text-align: center; text-decoration: none; border-radius: 10px; font-weight: bold;}
+        .back:hover {background: #16a085;}
+        footer {text-align: center; margin-top: 80px; color: #7f8c8d; font-size: 14px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Green Recycling Navigator</h1>
+        <h2>Facility Class Convenience Analysis</h2>
+        <select id="selector" onchange="showReport()">
+            <option value="">-- Select an option to generate a report --</option>
+            <option>Amenity</option>
+<option>Historic Building</option>
+<option>Community Facility</option>
+<option>School</option>
+<option>Remote Area</option>
+<option>Government Building</option>
+<option>Bus Terminus</option>
+<option>Community Hall</option>
+<option>Train Station (Light Rail)</option>
+<option>Rest Garden</option>
+<option>Museum</option>
+<option>Utility Facility</option>
+<option>Cultural Facility</option>
+<option>Train Station (MTR)</option>
+<option>Beach / Garden</option>
+<option>Traffic Facility</option>
+<option>Swimming Pool</option>
+<option>Park</option>
+        </select>
+        <div id="report" class="report"></div>
+        <div class="chart">
+            <img src="images/Recycling Convenience by Facility Type.png" alt="Chart">
+        </div>
+        <a href="../index.html" class="back">Return to Homepage</a>
+    </div>
+    <footer>Smart Green Recycling Navigator Team • AIDM7360 Group Project • November 2025</footer>
+
+    <script>
+        const reports = ["For <strong class='highlight'>Amenity</strong>, there are on average <strong class='highlight'>49.6</strong> recycling sites within 500 meters and <strong class='highlight'>127.5</strong> within 1 kilometer.", "For <strong class='highlight'>Historic Building</strong>, there are on average <strong class='highlight'>48.4</strong> recycling sites within 500 meters and <strong class='highlight'>131.0</strong> within 1 kilometer.", "For <strong class='highlight'>Community Facility</strong>, there are on average <strong class='highlight'>45.1</strong> recycling sites within 500 meters and <strong class='highlight'>123.8</strong> within 1 kilometer.", "For <strong class='highlight'>School</strong>, there are on average <strong class='highlight'>39.7</strong> recycling sites within 500 meters and <strong class='highlight'>112.8</strong> within 1 kilometer.", "For <strong class='highlight'>Remote Area</strong>, there are on average <strong class='highlight'>37.0</strong> recycling sites within 500 meters and <strong class='highlight'>104.1</strong> within 1 kilometer.", "For <strong class='highlight'>Government Building</strong>, there are on average <strong class='highlight'>36.4</strong> recycling sites within 500 meters and <strong class='highlight'>107.6</strong> within 1 kilometer.", "For <strong class='highlight'>Bus Terminus</strong>, there are on average <strong class='highlight'>31.6</strong> recycling sites within 500 meters and <strong class='highlight'>92.4</strong> within 1 kilometer.", "For <strong class='highlight'>Community Hall</strong>, there are on average <strong class='highlight'>31.1</strong> recycling sites within 500 meters and <strong class='highlight'>87.4</strong> within 1 kilometer.", "For <strong class='highlight'>Train Station (Light Rail)</strong>, there are on average <strong class='highlight'>31.0</strong> recycling sites within 500 meters and <strong class='highlight'>92.0</strong> within 1 kilometer.", "For <strong class='highlight'>Rest Garden</strong>, there are on average <strong class='highlight'>29.4</strong> recycling sites within 500 meters and <strong class='highlight'>88.8</strong> within 1 kilometer.", "For <strong class='highlight'>Museum</strong>, there are on average <strong class='highlight'>25.3</strong> recycling sites within 500 meters and <strong class='highlight'>74.5</strong> within 1 kilometer.", "For <strong class='highlight'>Utility Facility</strong>, there are on average <strong class='highlight'>24.5</strong> recycling sites within 500 meters and <strong class='highlight'>74.7</strong> within 1 kilometer.", "For <strong class='highlight'>Cultural Facility</strong>, there are on average <strong class='highlight'>23.4</strong> recycling sites within 500 meters and <strong class='highlight'>68.0</strong> within 1 kilometer.", "For <strong class='highlight'>Train Station (MTR)</strong>, there are on average <strong class='highlight'>21.3</strong> recycling sites within 500 meters and <strong class='highlight'>62.1</strong> within 1 kilometer.", "For <strong class='highlight'>Beach / Garden</strong>, there are on average <strong class='highlight'>15.8</strong> recycling sites within 500 meters and <strong class='highlight'>69.8</strong> within 1 kilometer.", "For <strong class='highlight'>Traffic Facility</strong>, there are on average <strong class='highlight'>13.5</strong> recycling sites within 500 meters and <strong class='highlight'>47.8</strong> within 1 kilometer.", "For <strong class='highlight'>Swimming Pool</strong>, there are on average <strong class='highlight'>8.9</strong> recycling sites within 500 meters and <strong class='highlight'>26.9</strong> within 1 kilometer.", "For <strong class='highlight'>Park</strong>, there are on average <strong class='highlight'>0.8</strong> recycling sites within 500 meters and <strong class='highlight'>7.0</strong> within 1 kilometer."];
+
+        function showReport() {
+            const sel = document.getElementById("selector");
+            const idx = sel.selectedIndex - 1;
+            const output = document.getElementById("report");
+            if (idx >= 0) {
+                output.innerHTML = reports[idx];
+                output.style.display = "block";
+            } else {
+                output.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
