@@ -1,8 +1,8 @@
-### Project Display: https://kinley1212.github.io/Smart-Green-Recycling-Navigator/
+## Project Display: https://kinley1212.github.io/Smart-Green-Recycling-Navigator/
 
 ---
 
-### Project Overview
+## Project Overview
 
 This project is a **group coursework** developed between **October 2025 and November 2025**.  
 
