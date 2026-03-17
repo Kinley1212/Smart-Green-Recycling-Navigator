@@ -1,4 +1,4 @@
-## Project Display: https://kinley1212.github.io/Smart-Green-Recycling-Navigator/
+### Project Display: https://kinley1212.github.io/Smart-Green-Recycling-Navigator/
 
 ---
 
@@ -14,7 +14,7 @@ This project integrates open datasets from **data.gov.hk** to visualize recyclin
 
 ---
 
-### My Role
+## My Role
 
 - **Concept & System Framework Design:** Developed the overall project concept, analytical logic, and system structure  
 - **Interactive Map Development:** Implemented the interactive Folium-based map and spatial analysis logic  
@@ -25,7 +25,7 @@ I was responsible for the overall content planning, system framework, interactiv
 
 ---
 
-### Approach & Methods
+## Approach & Methods
 
 - **Data Integration & Cleaning:**  
   - Cleaned and standardized CSV datasets  
@@ -42,7 +42,7 @@ I was responsible for the overall content planning, system framework, interactiv
 
 ---
 
-### Key Features
+## Key Features
 
 - Interactive Folium-based recycling map  
 - Two-way intelligent queries:
@@ -53,7 +53,7 @@ I was responsible for the overall content planning, system framework, interactiv
 
 ---
 
-### Tools & Technologies
+## Tools & Technologies
 
 - **Data Source:** Hong Kong Waste Recycling Points.csv, Service Information of Public Places.csv
 - **Database:** SQLite  
